@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Para lo mas lindo que tengo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,450;9..144,650&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="stars"></div>
+    <div class="glow"></div>
+    <div class="glow glow2"></div>
+
+    <div class="floaters" aria-hidden="true">
+      <span class="floater" style="--x:8;  --s:10; --d:12; --delay:0;"></span>
+      <span class="floater" style="--x:16; --s:18; --d:14; --delay:1.2;"></span>
+      <span class="floater" style="--x:28; --s:12; --d:11; --delay:2.3;"></span>
+      <span class="floater" style="--x:40; --s:22; --d:16; --delay:0.7;"></span>
+      <span class="floater" style="--x:52; --s:14; --d:13; --delay:1.9;"></span>
+      <span class="floater" style="--x:66; --s:20; --d:15; --delay:2.9;"></span>
+      <span class="floater" style="--x:78; --s:12; --d:12; --delay:0.9;"></span>
+      <span class="floater" style="--x:90; --s:16; --d:14; --delay:2.0;"></span>
+    </div>
+  </div>
+
+  <main class="stage">
+    <input id="open-letter" type="checkbox" />
+    <label class="backdrop" for="open-letter" aria-label="Cerrar la carta"></label>
+
+    <section class="card" aria-label="Carta para Angela">
+      <header class="top">
+        <h1 class="title">
+          Para <span class="name">Mi Mujer</span>
+          <span class="subtitle">Te amo</span>
+        </h1>
+
+        <p class="lead">
+          Aunque no pueda estar presencialmente a tu lado me gustaria estar siempre en tu corazón.
+        </p>
+      </header>
+
+      <div class="scene">
+        <div class="panda-wrap" aria-hidden="true">
+          <svg class="panda" viewBox="0 0 520 420" role="img" aria-label="Panda con un corazón">
+            <defs>
+              <radialGradient id="soft" cx="40%" cy="35%" r="70%">
+                <stop offset="0%" stop-color="rgba(255,255,255,.95)"/>
+                <stop offset="55%" stop-color="rgba(255,255,255,.55)"/>
+                <stop offset="100%" stop-color="rgba(255,255,255,.05)"/>
+              </radialGradient>
+
+              <linearGradient id="heartG" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#ffd1e3"/>
+                <stop offset="45%" stop-color="#ff6ea6"/>
+                <stop offset="100%" stop-color="#ff2e7a"/>
+              </linearGradient>
+            </defs>
+
+            <ellipse cx="260" cy="355" rx="160" ry="35" fill="rgba(0,0,0,.25)"/>
+
+            <circle class="ear" cx="155" cy="98" r="58" fill="#0f0f16"/>
+            <circle class="ear" cx="365" cy="98" r="58" fill="#0f0f16"/>
+
+            <ellipse class="head" cx="260" cy="150" rx="155" ry="135" fill="url(#soft)"/>
+            <ellipse cx="260" cy="165" rx="150" ry="125" fill="rgba(255,255,255,.78)"/>
+
+            <ellipse class="patch" cx="200" cy="160" rx="58" ry="66" fill="#141421"/>
+            <ellipse class="patch" cx="320" cy="160" rx="58" ry="66" fill="#141421"/>
+
+            <circle cx="212" cy="165" r="16" fill="#fff"/>
+            <circle cx="332" cy="165" r="16" fill="#fff"/>
+            <circle cx="214" cy="168" r="8.5" fill="#0b0b12"/>
+            <circle cx="334" cy="168" r="8.5" fill="#0b0b12"/>
+            <circle cx="210" cy="161" r="4" fill="#fff"/>
+            <circle cx="330" cy="161" r="4" fill="#fff"/>
+
+            <path d="M252 205 Q260 195 268 205 Q260 214 252 205Z" fill="#111119"/>
+            <path d="M260 214 C260 226 246 232 238 226" fill="none" stroke="#111119" stroke-width="4" stroke-linecap="round"/>
+            <path d="M260 214 C260 226 274 232 282 226" fill="none" stroke="#111119" stroke-width="4" stroke-linecap="round"/>
+
+            <ellipse class="blush" cx="170" cy="214" rx="28" ry="14" fill="rgba(255,70,130,.28)"/>
+            <ellipse class="blush" cx="350" cy="214" rx="28" ry="14" fill="rgba(255,70,130,.28)"/>
+
+            <ellipse class="body" cx="260" cy="285" rx="150" ry="120" fill="url(#soft)"/>
+            <ellipse cx="260" cy="295" rx="145" ry="115" fill="rgba(255,255,255,.70)"/>
+
+            <ellipse cx="260" cy="310" rx="85" ry="65" fill="rgba(20,20,33,.08)"/>
+
+            <path class="arm armL" d="M145 292 C110 275 106 235 130 216 C160 192 206 210 220 244 C230 270 210 308 176 304 C160 302 152 298 145 292Z" fill="#141421"/>
+            <path class="arm armR" d="M375 292 C410 275 414 235 390 216 C360 192 314 210 300 244 C290 270 310 308 344 304 C360 302 368 298 375 292Z" fill="#141421"/>
+
+            <g class="heart" transform="translate(260 278)">
+              <rect x="-22" y="-22" width="44" height="44" rx="8" ry="8" transform="rotate(45)" fill="url(#heartG)"/>
+              <circle cx="-16" cy="-8" r="18" fill="url(#heartG)"/>
+              <circle cx="16" cy="-8" r="18" fill="url(#heartG)"/>
+              <circle class="spark s1" cx="-26" cy="-22" r="3" fill="rgba(255,255,255,.9)"/>
+              <circle class="spark s2" cx="26" cy="-18" r="2.5" fill="rgba(255,255,255,.85)"/>
+              <circle class="spark s3" cx="0" cy="28" r="2.2" fill="rgba(255,255,255,.75)"/>
+            </g>
+          </svg>
+
+          <img class="gumball" src="gumball.jpg" alt="Gumball" loading="lazy" decoding="async">
+        </div>
+
+        <div class="letter-zone">
+          <label class="cta" for="open-letter" role="button" tabindex="0"
+            aria-label="Abrir o cerrar la carta"
+            aria-controls="love-letter"
+            aria-expanded="false"
+            data-open-text="Abrir la carta aquí" data-close-text="Cerrar la carta">
+            <span class="cta-glow" aria-hidden="true"></span>
+            <span class="cta-text">Abrir la carta aquí</span>
+            <span class="cta-mini">Panda te entregara la carta(el me ayudo a escribirla jaja)”</span>
+          </label>
+
+          <div class="envelope" aria-hidden="true">
+            <div class="env-back"></div>
+            <div class="env-front"></div>
+            <div class="env-flap"></div>
+            <div class="seal">
+              <span class="seal-heart" aria-hidden="true"></span>
+              <span class="seal-text">Mujer mía</span>
+            </div>
+          </div>
+
+          <article id="love-letter" class="letter" aria-label="Carta">
+            <div class="paper">
+              <button class="close-letter" type="button" aria-label="Cerrar carta" title="Cerrar">×</button>
+
+              <h2>
+                Angelin,
+                <span class="h2-sub">Mi amor hermosa</span>
+              </h2>
+
+              <p class="type">
+                <span class="typewriter">Te extraño cada dia...</span>
+              </p>
+
+              <p class="msg">
+                Quiero estar a tu lado cada día: despertar y que seas lo primero que vea; sentir que, si estás conmigo, todo irá bien.
+                Porque eres lo que más amo en este mundo, y me siento con la suerte de tener a una mujer tan hermosa, a quien amo tanto.
+                Tú me haces sentir bien y conviertes un día aburrido en uno lindo. Sueño cada día contigo: en cómo te abrazo, en cómo te hago mía,
+                y en lo hermosa que eres. Quiero que siempre estés bien, alejar todo lo que te hace sentir mal y darle vueltas de más a las cosas,
+                porque una niña tan linda como tú no merece llorar de dolor.
+                Y aunque discutamos o a veces no nos entendamos, quiero que sepas que te amo y que todo saldrá bien: estaré a tu lado y haré lo posible
+                para que los malos momentos pasen. Te amo mucho, amor mío <span style="color:red;">&#x2665;</span>.
+              </p>
+
+              <div class="timeline" role="list" aria-label="Nuestra historia">
+                <div class="milestone" role="listitem">
+                  <span class="dot"></span>
+                  <div class="m-text">
+                    <div class="m-title">
+                      <span class="js-date" data-iso="2025-11-01">1 de noviembre de 2025</span>
+                    </div>
+                    <div class="m-sub">Empezó lo nuestro.</div>
+                  </div>
+                </div>
+
+                <div class="milestone" role="listitem">
+                  <span class="dot"></span>
+                  <div class="m-text">
+                    <div class="m-title">
+                      <span class="js-date" data-today="true">—</span>
+                    </div>
+                    <div class="m-sub">Hoy😁</div>
+                  </div>
+                </div>
+              </div>
+
+              <p class="promise">
+                Aunque estemos a distancia quiero que nunca te sientas sola y este detalle es para que sepas 
+                que siempre estoy pensando en ti y quiero que estes conmigo siempre, y para que nunca se nos olvide
+                cuando empezo todo &hearts;.
+              </p>
+
+              <div class="sign">
+                <div class="from">
+                  Con todo mi cariño,<br/>
+                  <span class="sig">Leyder</span>
+                  <span class="sig-sub">de parte de tu hombre</span>
+                </div>
+
+                <div class="days" data-since="2025-11-01">
+                  <div class="days-num">102</div>
+                    <div class="days-sub">días desde el 1·11·2025</div>
+
+                    <div class="days-ymd">
+                      <span class="js-ymd">—</span>
+                    </div>
+                  <div class="days-today">Hoy: <span class="js-today">—</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
